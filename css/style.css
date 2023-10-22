@@ -1,0 +1,94 @@
+body {
+  background-color: #777777;
+}
+
+.container {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.box {
+  width: 500px;
+  height: 300px;
+  margin: 200px auto;
+  perspective: 1000px;
+  font-family: sans-serif;
+}
+
+.box:hover .BusinessCard {
+  transform: rotateY(180deg);
+}
+
+.BusinessCard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 2s;
+  transform-style: preserve-3d;
+  background: linear-gradient(rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.815)),
+    url(../images/pattern1.jpg);
+  background-position: center center;
+  /* background-size: cover; */
+}
+
+.BusinessCard > div {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.front{
+    text-transform: capitalize;
+}
+
+p[class='container']{
+  line-height: 28px;
+}
+
+.back {
+  transform: rotateY(180deg);
+  text-transform: capitalize;
+}
+
+.back span {
+  transform: translate3d(0px, 40px, 30px);
+  display: block;
+}
+
+p {
+  transform: translate3d(0px, 0%, 30px);
+  color: white;
+  text-align: center;
+}
+
+.back .container {
+  transform: translate3d(0px, -30px, 30px);
+  text-align: left;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+}
+
+.back input {
+  border: none;
+  display: block;
+  background-color: inherit;
+  color: white;
+  filter: brightness(0.5);
+}
+button {
+  width: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 10px auto;
+  cursor: pointer;
+}
+button input {
+  color: white;
+  filter: brightness(1);
+}
